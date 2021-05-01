@@ -24,17 +24,17 @@ var World = {
 	TILE_PROBS: {},
 	LANDMARKS: {},
 	STICKINESS: 0.5, // 0 <= x <= 1
-	LIGHT_RADIUS: 2,
-	BASE_WATER: 10,
-	MOVES_PER_FOOD: 2,
-	MOVES_PER_WATER: 1,
-	DEATH_COOLDOWN: 120,
-	FIGHT_CHANCE: 0.20,
-	BASE_HEALTH: 10,
-	BASE_HIT_CHANCE: 0.8,
-	MEAT_HEAL: 8,
-	MEDS_HEAL: 20,
-	FIGHT_DELAY: 3, // At least three moves between fights
+	LIGHT_RADIUS: 3,
+	BASE_WATER: 100,
+	MOVES_PER_FOOD: 200,
+	MOVES_PER_WATER: 100,
+	DEATH_COOLDOWN: 1,
+	FIGHT_CHANCE: 0.01,
+	BASE_HEALTH: 100,
+	BASE_HIT_CHANCE: 1,
+	MEAT_HEAL: 80,
+	MEDS_HEAL: 200,
+	FIGHT_DELAY: 5, // At least three moves between fights
 	NORTH: [ 0, -1],
 	SOUTH: [ 0,  1],
 	WEST:  [-1,  0],
@@ -44,59 +44,59 @@ var World = {
 		'fists': {
 			verb: _('punch'),
 			type: 'unarmed',
-			damage: 1,
-			cooldown: 2
+			damage: 10,
+			cooldown: 1
 		},
 		'bone spear': {
 			verb: _('stab'),
 			type: 'melee',
-			damage: 2,
-			cooldown: 2
+			damage: 20,
+			cooldown: 1
 		},
 		'iron sword': {
 			verb: _('swing'),
 			type: 'melee',
-			damage: 4,
-			cooldown: 2
+			damage: 40,
+			cooldown: 1
 		},
 		'steel sword': {
 			verb: _('slash'),
 			type: 'melee',
-			damage: 6,
-			cooldown: 2
+			damage: 60,
+			cooldown: .5
 		},
 		'bayonet': {
 			verb: _('thrust'),
 			type: 'melee',
-			damage: 8,
-			cooldown: 2
+			damage: 100,
+			cooldown: 1
 		},
 		'rifle': {
 			verb: _('shoot'),
 			type: 'ranged',
-			damage: 5,
-			cooldown: 1,
+			damage: 500,
+			cooldown: .1,
 			cost: { 'bullets': 1 }
 		},
 		'laser rifle': {
 			verb: _('blast'),
 			type: 'ranged',
-			damage: 8,
-			cooldown: 1,
+			damage: 800,
+			cooldown: .1,
 			cost: { 'energy cell': 1 }
 		},
 		'grenade': {
 			verb: _('lob'),
 			type: 'ranged',
-			damage: 15,
-			cooldown: 5,
+			damage: 1500,
+			cooldown: 1,
 			cost: { 'grenade': 1 }
 		},
 		'bolas': {
 			verb: _('tangle'),
 			type: 'ranged',
 			damage: 'stun',
-			cooldown: 15,
+			cooldown: 1,
 			cost: { 'bolas': 1 }
 		}
 	},

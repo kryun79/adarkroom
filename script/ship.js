@@ -3,10 +3,10 @@
  */
 var Ship = {
 	LIFTOFF_COOLDOWN: 120,
-	ALLOY_PER_HULL: 1,
-	ALLOY_PER_THRUSTER: 1,
-	BASE_HULL: 0,
-	BASE_THRUSTERS: 1,
+	ALLOY_PER_HULL: 100,
+	ALLOY_PER_THRUSTER: 100,
+	BASE_HULL: 100,
+	BASE_THRUSTERS: 10,
 	name: _("Ship"),
 	init: function(options) {
 		this.options = $.extend(
